@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'snowballFont';
+    src: url('../assets/snowballFont.ttf');
+}
+
+/*test if CSS is linked*/
+body {
+    background-color: aquamarine;
+}
+
+/*testing if images are loading*/
+.test-div {
+    height: 100%;
+    width: 100%;
+    font-family: 'snowballFont';
+    background: url('../assets/sophia-unsplash.jpg');
+}
