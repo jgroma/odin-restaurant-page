@@ -1,17 +1,142 @@
+/*@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap');
+
+:root {
+    --logo: rgb(40, 47, 107);
+    --navbar: rgb(223, 230, 231);
+    --article-bg: rgb(193, 229, 253);
+    --footer: rgb(64, 68, 68);
+    --article-font: "Poppins";
+}
+
 @font-face {
     font-family: 'snowballFont';
     src: url('../assets/snowballFont.ttf');
 }
 
-/*test if CSS is linked*/
-body {
-    background-color: aquamarine;
+/*BASE LAYOUT*/
+
+* {
+    box-sizing: border-box;
+    font-size: 1.5em;
 }
 
-/*testing if images are loading*/
-.test-div {
+body {
+    background: url('../assets/sophia-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+    height: 100vh;
+    width: 100%;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 75px 1fr 50px / 1fr;
+}
+
+/*header {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}*/
+
+.header-wrapper {
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family:'snowballFont';
+    font-size: 1.7em;
+    color: var(--logo);
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+nav ul button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--navbar);
+}
+
+article {
     height: 100%;
     width: 100%;
-    font-family: 'snowballFont';
-    background: url('../assets/sophia-unsplash.jpg');
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    font-family: var(--article-font);
+    font-size: 1.2em;
 }
+
+.article-wrapper {
+    background-color: rgba(255, 255, 255, 0.24);
+    height: 100%;
+    width: 50%;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 1.1em;
+}
+
+footer {
+    height: 100%;
+    width: 100%;
+    grid-row: 3 / 4;
+
+    color: var(--footer);
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px ;
+}
+
+/*ARTICLES*/
+
+/*HOME ARTICLE*/
+
+.article-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 100%;
+
+}
+
+.article-container img {
+    height: 100%;
+    width: 100%;
+}
+
+span button {
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/*MENU ARTICLE*/
+
+/*ABOUT US ARTICLE*/
