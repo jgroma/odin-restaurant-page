@@ -95,9 +95,6 @@ article {
     justify-content: space-between;
 }
 
-h1 {
-    font-size: 1.1em;
-}
 
 footer {
     height: 100%;
@@ -118,7 +115,7 @@ footer {
 
 /*HOME ARTICLE*/
 
-.article-container {
+.home-container {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -127,9 +124,13 @@ footer {
 
 }
 
-.article-container img {
+.home-container img {
     height: 100%;
     width: 100%;
+}
+
+h1 {
+    font-size: 1.1em;
 }
 
 span button {
@@ -139,4 +140,116 @@ span button {
 
 /*MENU ARTICLE*/
 
+.menu-heading {
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    position: relative;
+    flex: 1 1 auto;
+    /*max-height: 300px;
+    max-width: 500px;*/
+    height: clamp(150px, 100%, 300px);
+    width: clamp(150px, 100%, 500px);
+}
+
+.item img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(40, 41, 43);
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.item:hover .overlay {
+    opacity: 0.70;
+}
+
+.item-text {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
 /*ABOUT US ARTICLE*/
+
+.about-heading {
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.staff {
+    position: relative;
+    flex: 1 1 auto;
+    /*max-height: 300px;
+    max-width: 500px;*/
+    height: clamp(150px, 100%, 300px);
+    width: clamp(150px, 100%, 500px);
+}
+
+.staff img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(40, 41, 43);
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.staff:hover .overlay {
+    opacity: 0.70;
+}
+
+.staff-text {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
