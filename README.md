@@ -18,5 +18,4 @@ The aim of this project is to practice using webpack and modules by dynamically 
 -white and brown bird on water by [Nareeta Martin](https://unsplash.com/photos/arKunMFu-EM)  
 <br>
 #TO-DO  
--remove hardcoded HTML design and render it using Javascript  
 -use modules to set up tabbed browsing
