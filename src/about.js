@@ -2,7 +2,9 @@ import ownerImgSrc from './assets/argaman-unsplash.jpg';
 import barkeeperImgSrc from './assets/feliksik-unsplash.jpg';
 import waitressImgSrc from './assets/martin-unsplash.jpg';
 
-export function renderAbout() {
+    const aboutWrapper = document.createElement("div");
+    aboutWrapper.classList.add("article-wrapper");
+
     const aboutHeading = document.createElement("h1");
     aboutHeading.classList.add("about-heading");
 
@@ -47,5 +49,9 @@ export function renderAbout() {
         aboutContainer.appendChild(staff);
     })
 
-    articleWrapper.appendChild(aboutContainer);
-}
+    aboutWrapper.appendChild(aboutHeading);
+    aboutWrapper.appendChild(aboutContainer);
+
+    export {
+        aboutWrapper
+    }

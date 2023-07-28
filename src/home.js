@@ -1,14 +1,11 @@
 import marketImgSrc from './assets/tapan-unsplash.jpg';
-//import articleWrapper from "./layout.js";
 
-//articleWrapper;
-
-export function renderHome() {
-    //const articleWrapper = document.querySelector("article-wrapper");
+    const homeWrapper = document.createElement("div");
+    homeWrapper.classList.add("article-wrapper");
 
     const homeHeader = document.createElement("div");
     homeHeader.textContent = "Welcome to Penguin Bistre,";
-    articleWrapper.appendChild(homeHeader);
+
     const homeContainer = document.createElement("div");
     homeContainer.classList.add("home-container")
     const marketImg = new Image();
@@ -26,5 +23,11 @@ export function renderHome() {
     homeSpanBtn.textContent = "Click here";
     homeSpan.appendChild(homeSpanBtn);
     homeContainer.appendChild(homeSpan);
-    articleWrapper.appendChild(homeContainer);
-}
+
+    homeWrapper.appendChild(homeHeader);
+    homeWrapper.appendChild(homeContainer);
+
+    export {
+        homeWrapper,
+        homeSpanBtn
+    }

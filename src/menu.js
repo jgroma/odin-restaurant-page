@@ -3,11 +3,12 @@ import squidImgSrc from './assets/cameron-unsplash.jpg';
 import inkImgSrc from './assets/ledoux-unsplash.jpg';
 import waterImgSrc from './assets/trovato-unsplash.jpg';
 
-export function renderMenu() {
+    const menuWrapper = document.createElement("div");
+    menuWrapper.classList.add("article-wrapper");
+
     const menuHeader = document.createElement("h1");
     menuHeader.classList.add("menu-heading");
     menuHeader.textContent = "Menu";
-    articleWrapper.appendChild(menuHeader);
 
     const menuContainer = document.createElement("div");
     menuContainer.classList.add("menu-container");
@@ -59,6 +60,10 @@ export function renderMenu() {
 
         menuContainer.appendChild(item);
     })
+    
+    menuWrapper.appendChild(menuHeader);
+    menuWrapper.append(menuContainer);
 
-    articleWrapper.append(menuContainer);
-}
+    export {
+        menuWrapper
+    }
